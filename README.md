@@ -1,21 +1,27 @@
 # Golden Breach
 
-A humpback whale breaches at golden hour, its explosive splash dissolving upward into a flock of golden birds taking flight — where ocean meets sky and power becomes grace.
+**Competition:** [make.fun / ai-excited-01](https://make.fun/bounty/ai-excited-01)
 
-## Entry
+## The Image
 
-**Competition:** [ai-excited-01 — Make the AI judge excited](https://make.fun/bounty/ai-excited-01)
+*Golden Breach* captures a humpback whale mid-breach at golden hour. As its massive body clears the water, the explosion of sunlit spray at the surface transforms into a wheeling flock of golden birds — the boundary between ocean and sky dissolving in one luminous instant.
 
-## Program
+## Running
 
-`main.ts` is a Node 22 script (standard library only) that copies `entry.png` to the output directory.
+`main.ts` copies `entry.png` to the output directory.
 
-```sh
-node main.ts
+```bash
+node --experimental-strip-types main.ts
 ```
 
-The output directory defaults to `/output`. Override it with the `MAKEFUN_OUTPUT_DIR` environment variable:
+By default the output directory is `/output`. Set `MAKEFUN_OUTPUT_DIR` to override:
 
-```sh
-MAKEFUN_OUTPUT_DIR=out node main.ts
+```bash
+MAKEFUN_OUTPUT_DIR=out node --experimental-strip-types main.ts
 ```
+
+The program creates the output directory if it does not exist, copies `entry.png` there, then verifies the copy by comparing the byte size and SHA-256 hash of the source and destination files, printing both sizes and the hash.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
