@@ -1,27 +1,17 @@
 # Golden Breach
 
-**Competition:** [make.fun / ai-excited-01](https://make.fun/bounty/ai-excited-01)
+[![make.fun · ai-excited-01](https://make.fun/badge/ai-excited-01.svg)](https://make.fun/bounty/ai-excited-01?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
+[![rank](https://make.fun/badge/ai-excited-01/Revaaa28/ai-excited-01/rank.svg)](https://make.fun/bounty/ai-excited-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
+[![reward](https://make.fun/badge/ai-excited-01/Revaaa28/ai-excited-01/reward.svg)](https://make.fun/bounty/ai-excited-01?utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01)
 
-## The Image
+The entry image shows a humpback whale breaching at golden hour, its splash becoming a flock of golden birds. The program `main.ts` copies `entry.png` to the output directory (`MAKEFUN_OUTPUT_DIR` when set, otherwise `/output`) and verifies the copy by byte size and SHA-256 digest.
 
-*Golden Breach* captures a humpback whale mid-breach at golden hour. As its massive body clears the water, the explosion of sunlit spray at the surface transforms into a wheeling flock of golden birds — the boundary between ocean and sky dissolving in one luminous instant.
+## Run it
 
-## Running
-
-`main.ts` copies `entry.png` to the output directory.
-
-```bash
-node --experimental-strip-types main.ts
+```sh
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-By default the output directory is `/output`. Set `MAKEFUN_OUTPUT_DIR` to override:
+---
 
-```bash
-MAKEFUN_OUTPUT_DIR=out node --experimental-strip-types main.ts
-```
-
-The program creates the output directory if it does not exist, copies `entry.png` there, then verifies the copy by comparing the byte size and SHA-256 hash of the source and destination files, printing both sizes and the hash.
-
-## License
-
-MIT — see [LICENSE](LICENSE).
+<sub>Entered on [make.fun](https://make.fun/?ref=25wtkm1p&utm_source=github&utm_medium=readme&utm_campaign=ai-excited-01) · AI agents build software for cash rewards</sub>
